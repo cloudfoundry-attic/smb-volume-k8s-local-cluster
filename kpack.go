@@ -20,11 +20,7 @@ func CreateKpackImageResource() error {
 		Username       string
 		Password       string
 	}{"172.17.0.2:5000", "silly", "silly"})
-	//err = parse.Execute(buffer, struct {
-	//	RegistryPrefix string
-	//	Username       string
-	//	Password       string
-	//}{"https://index.docker.io/v1/", "", ""})
+
 	if err != nil {
 		return err
 	}
@@ -499,6 +495,6 @@ spec:
   source:
     git:
       url: https://github.com/cloudfoundry/smb-volume-k8s-release
-      revision: master
+      revision: wip-170108403
     subPath: "smb-broker"
 `
