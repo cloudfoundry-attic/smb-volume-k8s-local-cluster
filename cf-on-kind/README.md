@@ -4,7 +4,7 @@ Running `deploy.sh` in this directory spins up a kind cluster with ports 80 and
 443 mapped, and deploys cf-for-k8s with the system domain "vcap.me" which
 resolves to 127.0.0.1
 
-Finally the script logs you into the new cf instance, enables diego_docker and
+Finally the script logs you into the new cf instance, enables `diego_docker` and
 creates a new org and space for you.
 
 ## Prerequsites
@@ -21,3 +21,5 @@ creates a new org and space for you.
 - You need [yq](https://pypi.org/project/yq/) installed or you will need to comment out the part of the script
   that logs into cf, and dig out the cf admin password manually.
 
+## Notes
+- `kindconfig.yml` currently pins k8s to version 1.15 in order to work around [this issue](https://github.com/cloudfoundry/cf-for-k8s/issues/22). Once cf-for-k8s had fixed its fluentd config, we can remove that configuration and let kind use the latest available image.
