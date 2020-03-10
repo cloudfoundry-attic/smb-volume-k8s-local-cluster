@@ -9,7 +9,7 @@ pushd ~/workspace/cf-for-k8s
   ./hack/generate-values.sh vcap.me > /tmp/cf-values.yml
 
   # create a config that has load balancer ingress replaced by a nodeport
-  ytt -f ./config -f /tmp/cf-values.yml -f /tmp/ingress_for_kind.yml > /tmp/dump.yml
+  ytt -f ./config -f /tmp/cf-values.yml -f config-optional/remove-resource-requirements.yml -f /tmp/ingress_for_kind.yml > /tmp/dump.yml
 
   # enable volume services.  (we cannot easily use ytt for this substitution because the
   # entire yaml config for ccng is a big stupid string.)
