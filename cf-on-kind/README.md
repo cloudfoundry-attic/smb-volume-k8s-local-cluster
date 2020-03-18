@@ -20,6 +20,3 @@ creates a new org and space for you.
 - You must have [cf-for-k8s](https://github.com/cloudfoundry/cf-for-k8s) cloned to `~/workspace/cf-for-k8s`
 - You need [yq](https://pypi.org/project/yq/) installed or you will need to comment out the part of the script
   that logs into cf, and dig out the cf admin password manually.
-
-## Notes
-- `kindconfig.yml` currently pins k8s to version 1.15 in order to work around [this issue](https://github.com/cloudfoundry/cf-for-k8s/issues/22). Once cf-for-k8s had fixed its fluentd config, we can remove that configuration and let kind use the latest available image.
