@@ -185,6 +185,6 @@ func runTestCommand(name string, cmds ...string) (string, string) {
 
 	session, err := gexec.Start(command, GinkgoWriter, GinkgoWriter)
 	Expect(err).NotTo(HaveOccurred())
-	Eventually(session, time.Minute).Should(gexec.Exit(0), string(session.Out.Contents()))
+	Eventually(session).Should(gexec.Exit(0), string(session.Out.Contents()))
 	return string(session.Out.Contents()), string(session.Err.Contents())
 }
