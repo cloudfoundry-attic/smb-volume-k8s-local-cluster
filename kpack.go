@@ -458,7 +458,7 @@ kind: ClusterBuilder
 metadata:
   name: default
 spec:
-  image: cloudfoundry/cnb:0.0.84-cflinuxfs3
+  image: cloudfoundry/cnb:bionic
 `
 
 var pushCredentialsSecretYamlTemplate = `apiVersion: v1
