@@ -1,14 +1,10 @@
 #! /bin/bash -ex
 
 pushd ~/workspace/cf-for-k8s
-  ./hack/generate-values.sh vcap.me > /tmp/cf-values.yml
+  ./hack/generate-values.sh -d vcap.me > /tmp/cf-values.yml
 
   # create a config that has load balancer ingress replaced by a nodeport
   ytt -f ./config -f /tmp/cf-values.yml -f config-optional/remove-resource-requirements.yml -f config-optional/use-nodeport-for-ingress.yml > /tmp/dump.yml
-
-  # enable volume services.  (we cannot easily use ytt for this substitution because the
-  # entire yaml config for ccng is a big stupid string.)
-  sed -ibak 's/volume_services_enabled:\sfalse/volume_services_enabled: true/' /tmp/dump.yml
 
   # note: this config will fail if ports 80 and 443 are not available on localhost
   kind create cluster --config=./deploy/kind/cluster.yml
