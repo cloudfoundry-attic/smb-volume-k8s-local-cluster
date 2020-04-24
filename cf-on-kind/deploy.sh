@@ -4,12 +4,17 @@ pushd ~/workspace/cf-for-k8s
   ./hack/generate-values.sh -d vcap.me > /tmp/cf-values.yml
 
   # create a config that has load balancer ingress replaced by a nodeport
-  ytt -f ./config -f /tmp/cf-values.yml -f config-optional/remove-resource-requirements.yml -f config-optional/use-nodeport-for-ingress.yml > /tmp/dump.yml
+  ytt -f ./config -f /tmp/cf-values.yml -f config-optional/remove-resource-requirements.yml -f config-optional/remove-ingressgateway-service.yml > /tmp/dump.yml
 
   # note: this config will fail if ports 80 and 443 are not available on localhost
   kind create cluster --config=./deploy/kind/cluster.yml
 
-  # deploy with kapp
+  sleep 3
+
+  wget https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.6/components.yaml -O /tmp/metrics.yaml
+  kapp deploy -a metrics-server -f /tmp/metrics.yaml -y
+
+  # deploy cf with kapp
   kapp deploy -a cf -f /tmp/dump.yml -y
 popd
 
