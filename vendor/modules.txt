@@ -1,16 +1,16 @@
 # github.com/BurntSushi/toml v0.3.1
 github.com/BurntSushi/toml
-# github.com/alessio/shellescape v0.0.0-20190409004728-b115ca0f9053
+# github.com/alessio/shellescape v1.2.2
 github.com/alessio/shellescape
-# github.com/evanphx/json-patch v4.5.0+incompatible
-github.com/evanphx/json-patch
+# github.com/evanphx/json-patch/v5 v5.0.0
+github.com/evanphx/json-patch/v5
 # github.com/hpcloud/tail v1.0.0
 github.com/hpcloud/tail
 github.com/hpcloud/tail/ratelimiter
 github.com/hpcloud/tail/util
 github.com/hpcloud/tail/watch
 github.com/hpcloud/tail/winfile
-# github.com/mattn/go-isatty v0.0.11
+# github.com/mattn/go-isatty v0.0.12
 github.com/mattn/go-isatty
 # github.com/onsi/ginkgo v1.12.0
 github.com/onsi/ginkgo
@@ -46,15 +46,17 @@ github.com/onsi/gomega/matchers/support/goraph/edge
 github.com/onsi/gomega/matchers/support/goraph/node
 github.com/onsi/gomega/matchers/support/goraph/util
 github.com/onsi/gomega/types
-# github.com/pelletier/go-toml v1.6.0
+# github.com/pelletier/go-toml v1.7.0
 github.com/pelletier/go-toml
-# github.com/pkg/errors v0.9.0
+# github.com/pkg/errors v0.9.1
 github.com/pkg/errors
+# github.com/spf13/pflag v1.0.5
+github.com/spf13/pflag
 # golang.org/x/net v0.0.0-20191004110552-13f9640d40b9
 golang.org/x/net/html
 golang.org/x/net/html/atom
 golang.org/x/net/html/charset
-# golang.org/x/sys v0.0.0-20200113162924-86b910548bc1
+# golang.org/x/sys v0.0.0-20200116001909-b77594299b42
 golang.org/x/sys/unix
 # golang.org/x/text v0.3.2
 golang.org/x/text/encoding
@@ -81,15 +83,15 @@ golang.org/x/xerrors/internal
 gopkg.in/fsnotify.v1
 # gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7
 gopkg.in/tomb.v1
-# gopkg.in/yaml.v2 v2.2.7
+# gopkg.in/yaml.v2 v2.2.8
 gopkg.in/yaml.v2
-# gopkg.in/yaml.v3 v3.0.0-20191120175047-4206685974f2
+# gopkg.in/yaml.v3 v3.0.0-20200121175148-a6ecf24a6d71
 gopkg.in/yaml.v3
-# k8s.io/apimachinery v0.17.0
+# k8s.io/apimachinery v0.18.2
 k8s.io/apimachinery/pkg/util/errors
 k8s.io/apimachinery/pkg/util/sets
 k8s.io/apimachinery/pkg/util/version
-# sigs.k8s.io/kind v0.7.0
+# sigs.k8s.io/kind v0.8.0
 sigs.k8s.io/kind/pkg/apis/config/defaults
 sigs.k8s.io/kind/pkg/apis/config/v1alpha3
 sigs.k8s.io/kind/pkg/apis/config/v1alpha4
@@ -113,6 +115,7 @@ sigs.k8s.io/kind/pkg/cluster/internal/loadbalancer
 sigs.k8s.io/kind/pkg/cluster/internal/logs
 sigs.k8s.io/kind/pkg/cluster/internal/patch
 sigs.k8s.io/kind/pkg/cluster/internal/providers/docker
+sigs.k8s.io/kind/pkg/cluster/internal/providers/podman
 sigs.k8s.io/kind/pkg/cluster/internal/providers/provider
 sigs.k8s.io/kind/pkg/cluster/internal/providers/provider/common
 sigs.k8s.io/kind/pkg/cluster/nodes
@@ -120,10 +123,11 @@ sigs.k8s.io/kind/pkg/cluster/nodeutils
 sigs.k8s.io/kind/pkg/cmd
 sigs.k8s.io/kind/pkg/errors
 sigs.k8s.io/kind/pkg/exec
+sigs.k8s.io/kind/pkg/fs
 sigs.k8s.io/kind/pkg/internal/apis/config
 sigs.k8s.io/kind/pkg/internal/apis/config/encoding
 sigs.k8s.io/kind/pkg/internal/cli
 sigs.k8s.io/kind/pkg/internal/env
 sigs.k8s.io/kind/pkg/log
-# sigs.k8s.io/yaml v1.1.0
+# sigs.k8s.io/yaml v1.2.0
 sigs.k8s.io/yaml
